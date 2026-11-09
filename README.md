@@ -1,5 +1,7 @@
 # Wisdom Delight Barbing Shop
 
+**Live website:** https://wisdom-delight-barbing-shop.netlify.app/
+
 An online booking app for a barbing shop in Warri, Nigeria. Customers pick a service and a barber, choose a free time slot, and book in under a minute. The owner gets one reliable record of every appointment.
 
 ## The problem it solves
@@ -22,7 +24,7 @@ HTML, CSS, vanilla JavaScript · Netlify Functions (Node.js) · Neon PostgreSQL 
 
 ## Project structure
 
-```
+```text
 public/                 front end (index.html, css, js, images)
 netlify/functions/      serverless API: services, slots, bookings
 netlify/lib/db.js       shared Neon connection
@@ -33,14 +35,14 @@ INSTRUCTIONS.md         full setup and deploy guide
 
 ## Database design
 
-```
+```text
 customers            services             barbers          appointments
 customer_id (PK)     service_id (PK)      barber_id (PK)   appointment_id (PK)
 phone (UNIQUE)       name, description    name             customer_id (FK)
-name                 price, image                          service_id  (FK)
-                                                           barber_id   (FK)
-                                                           appointment_time
-                                                           UNIQUE(barber_id, appointment_time)
+name                 price, image                          service_id (FK)
+                                                          barber_id (FK)
+                                                          appointment_time
+                                                          UNIQUE(barber_id, appointment_time)
 ```
 
 ## Run locally
