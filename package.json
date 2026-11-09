@@ -1,0 +1,7 @@
+{
+  "name": "wisdom-delight-barbing-shop",
+  "version": "1.0.0",
+  "description": "Online booking app for Wisdom Delight Barbing Shop (Netlify Functions + Neon PostgreSQL)",
+  "scripts": { "dev": "netlify dev" },
+  "dependencies": { "@neondatabase/serverless": "^1.0.0" }
+}
